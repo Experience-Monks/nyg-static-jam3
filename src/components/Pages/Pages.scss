@@ -1,0 +1,9 @@
+@import 'shared.scss';
+
+.Pages {
+  flex: 1 1 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  @include z-index(pages);
+}

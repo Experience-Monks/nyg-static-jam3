@@ -1,0 +1,66 @@
+@import 'shared.scss';
+
+.Rotate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 9999;
+  pointer-events: all;
+
+  .Header-logo {
+    font-size: 1.8rem;
+    .phone & {
+      @media (min-width: 768px) {
+        font-size: 2.2rem;
+      }
+    }
+    @media (min-width: 1024px) {
+      font-size: 4.5rem;
+    }
+  }
+
+  .container {
+    .rotate-icon {
+      display: block;
+      margin: auto;
+      width: 80px;
+      .phone & {
+        @media (min-width: 768px) {
+          width: 100px;
+        }
+      }
+      @media (min-width: 1024px) {
+        width: 80%;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    p {
+      @include font-size(0.7, 1.1, 0.03);
+      .phone & {
+        @media (min-width: 768px) {
+          @include font-size(1.1, 1.1, 0.03);
+        }
+      }
+      @media (min-width: 1024px) {
+        @include font-size(2.5, 1, 0.1);
+        margin-top: 20px;
+      }
+      text-transform: uppercase;
+      color: #fff;
+      opacity: 0.5;
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+}

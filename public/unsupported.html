@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Browser is not supported</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 10px;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .unsupported {
+      width: 100%;
+      height: 100%;
+      padding-top: 3.4rem;
+    }
+
+    .unsupported .title {
+      padding-top: 4.5rem;
+      padding-left: 2.8rem;
+      padding-right: 1.5rem;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 5.4rem;
+      line-height: 5.4rem;
+      font-weight: 400;
+      color: #141c23;
+    }
+
+    .unsupported hr {
+      width: 100%;
+      height: 1px;
+      margin-top: 4.6rem;
+      margin-bottom: 5rem;
+      background-color: #ccc8c0;
+      border: none;
+    }
+
+    .unsupported .description {
+      padding-bottom: 5.6rem;
+      padding-left: 3rem;
+      padding-right: 1.5rem;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 1.9rem;
+      font-weight: 400;
+      line-height: 3.1rem;
+    }
+
+    .unsupported .description p {
+      width: 22.9rem;
+      padding-bottom: 2.3rem;
+      color: #686868;
+    }
+
+    .unsupported .description ul {
+      list-style-type: none;
+    }
+
+    .unsupported .description ul li {
+      display: inline-block;
+      padding-top: 1.2rem;
+      padding-right: 4rem;
+    }
+
+    .unsupported .description ul li a,
+    .unsupported .description ul li a:visited {
+      color: #204293;
+      text-decoration: none;
+    }
+
+    .unsupported .description ul li a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (min-width: 768px) {
+      .unsupported {
+        padding-top: 14.4rem;
+      }
+
+      .unsupported .title {
+        max-width: 100rem;
+        padding-left: 17.1rem;
+        font-size: 10rem;
+        line-height: 11rem;
+      }
+
+      .unsupported hr {
+        margin-top: 8.8rem;
+        margin-bottom: 6.7rem;
+      }
+
+      .unsupported .description {
+        padding-bottom: 17.1rem;
+        padding-left: 17.3rem;
+        font-size: 2rem;
+        line-height: 3.5rem;
+      }
+
+      .unsupported .description p {
+        width: 100%;
+        padding-bottom: 2.9rem;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="unsupported">
+    <h1 class="title">Sorry, this website is not optimized for your browser</h1>
+    <hr>
+    <div class="description">
+      <p>The website is optimized for the latest version of</p>
+      <ul>
+        <li><a href="#">Chrome</a></li>
+        <li><a href="#">Firefox</a></li>
+        <li><a href="#">Safari</a></li>
+        <li><a href="#">Microsoft Edge</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

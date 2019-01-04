@@ -1,0 +1,135 @@
+@import 'shared.scss';
+
+.Footer {
+  position: relative;
+  background: #000;
+  z-index: 1;
+  color: #fff;
+}
+
+.Footer--wrapper {
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 1024px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+.Footer--postmates-logo {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  display: inline-block;
+  width: 149px;
+  height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .Footer--wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (min-width: 1061px) {
+  .Footer--wrapper {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+.Footer--nav {
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 96px;
+  padding-bottom: 163px;
+}
+
+.Footer--logo-column {
+  margin-top: 64px;
+  display: inline-block;
+  text-align: left;
+  flex: 1 0 100%;
+}
+
+@media screen and (min-width: 415px) {
+  .Footer--logo-column {
+    flex: 1 0 100%;
+  }
+}
+
+@media screen and (min-width: 1061px) {
+  .Footer--logo-column {
+    margin-top: 0;
+    flex: 1 0 calc(100% / 6 + 50px);
+  }
+}
+
+.Footer--column {
+  flex: 1 0 50%;
+  margin-top: 64px;
+  display: inline-block;
+  text-align: left;
+
+  > a {
+    font-size: 14px;
+    letter-spacing: 0.14px;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    color: #8f95a3;
+    padding: 17px 0 0;
+  }
+}
+
+@media screen and (min-width: 415px) {
+  .Footer--column {
+    flex: 1 0 calc(100% / 5);
+  }
+}
+
+@media screen and (min-width: 1061px) {
+  .Footer--column {
+    margin-top: 0;
+    flex: 1 0 calc(100% / 6 - 10px);
+  }
+}
+
+.Footer--nav-header {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.85em;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+}
+
+.Footer--bottom-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 47px;
+
+  > a {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    color: #8f95a3;
+    margin: 0 12px;
+    padding: 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 3px;
+      top: 50%;
+      margin-top: -3px;
+      margin-left: 9px;
+    }
+  }
+}

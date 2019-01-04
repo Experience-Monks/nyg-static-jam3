@@ -1,0 +1,49 @@
+{
+  "name": "nyg-static-jam3",
+  "version": "0.0.1",
+  "description": "Jam3 frontend static project scaffold generator based on nyg",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/",
+    "linters": "npm run js-lint",
+    "js-lint": "eslint './*.js' -c ./.eslintrc --quiet",
+    "prepush": "echo 'Pre-push checks...' && npm run js-lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jam3/nyg-static-jam3.git"
+  },
+  "contributors": [
+    "Iran Reyes <iran.reyes@jam3.com>",
+    "Jacob Jang <jacob.jang@jam3.com>",
+    "Nick Poisson <nick@jam3.com>",
+    "Mike Nowak <mike.nowak@jam3.com>",
+    "Craig Hill <craig.hillwood@jam3.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jam3/nyg-static-jam3/issues"
+  },
+  "homepage": "https://github.com/Jam3/nyg-static-jam3#readme",
+  "dependencies": {
+    "nyg": "^2.8.0"
+  },
+  "engines": {
+    "node":">=8.11.2",
+    "npm":">=6.1.0"
+  },
+  "keywords": [
+    "jam3",
+    "project",
+    "scaffold",
+    "generator",
+    "nyg"
+  ],
+  "devDependencies": {
+    "eslint": "^4.19.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "prettier": "^1.11.1"
+  }
+}

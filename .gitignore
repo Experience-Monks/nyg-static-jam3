@@ -1,0 +1,39 @@
+## -------- Welcome to the Jam3 Generator gitignore --------
+##
+## Please add your generator ignores ordered by topics.
+## See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# Global
+.DS_Store
+*.log*
+
+# IDEs
+.vscode
+sketch
+.idea
+
+# Node & Npm
+node_modules
+
+# Builds
+/build
+
+# Stats
+stats.html
+
+# Testing
+/coverage
+
+# Dot Env
+.env
+
+# react-static
+tmp
+build
+
+# CSS files of src
+src/**/*.css
+
+# Documentation
+public/components
+public/styleguide
