@@ -10,10 +10,36 @@
 # IDEs
 .vscode
 sketch
-.idea
 
-# Node & NPM
+# Node & Npm
 node_modules
 
-# build
-dist
+# Builds
+/build
+/dist
+
+# Stats
+stats.html
+
+# Testing
+/coverage
+
+# Create React App Dev
+default-cra-rewrite-config.json
+final-cra-rewrite-config.json
+bundle-size-analyzer.html
+bundle-analyzer-report.html
+
+# CSS files of src
+src/**/*.css
+
+# Dynamically built files
+src/style/layout.scss
+
+# Local env variables
+.env.local
+.env.*.local
+
+# Documentation
+public/components
+public/styleguide

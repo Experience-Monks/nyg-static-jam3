@@ -1,6 +1,6 @@
 import React from 'react';
 import { Root, Routes } from 'react-static';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './App.scss';
 

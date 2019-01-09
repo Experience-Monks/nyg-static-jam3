@@ -1,25 +1,21 @@
 
 
 
-import t_0 from '../../node_modules/react-static/lib/browser/components/Default404'
-import t_1 from '../../src/pages/404/404.js'
-import t_2 from '../../src/pages/About/About.js'
-import t_3 from '../../src/pages/Blog/Blog.js'
-import t_4 from '../../src/pages/Landing/Landing.js'
-import t_5 from '../../src/pages/Landing/Landing'
-import t_6 from '../../src/pages/About/About'
-import t_7 from '../../src/pages/Blog/Blog'
-import t_8 from '../../src/components/Post/Post'
+import t_0 from '../../src/pages/404.js'
+import t_1 from '../../src/pages/about.js'
+import t_2 from '../../src/pages/blog.js'
+import t_3 from '../../src/containers/Post'
+import t_4 from '../../src/pages/landing.js'
+import t_5 from '../../src/pages/landing'
 
 // Template Map
-export default [
-  t_0,
-t_1,
-t_2,
-t_3,
-t_4,
-t_5,
-t_6,
-t_7,
-t_8
-]
+export default {
+  '../../src/pages/404.js': t_0,
+'../../src/pages/about.js': t_1,
+'../../src/pages/blog.js': t_2,
+'../../src/containers/Post': t_3,
+'../../src/pages/landing.js': t_4,
+'../../src/pages/landing': t_5
+}
+
+export const notFoundTemplate = "../../src/pages/404.js"

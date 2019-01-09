@@ -6,8 +6,6 @@ export default async () => {
   // perform any async loading of page data here
   const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts');
 
-  //  Tip: React Static also automatically generates routes for folders/files in pages,
-  //  i.e. 404 in pages will have route /404
   return [
     {
       path: routes.Landing,
@@ -30,6 +28,10 @@ export default async () => {
           post
         })
       }))
+    },
+    {
+      path: routes['404'],
+      component: 'src/pages/404/404'
     }
   ];
 };

@@ -11,7 +11,7 @@ const routes = {
       path: `/post`
     }
   },
-  NotFound: {
+  '404': {
     path: `/404`
   }
 };

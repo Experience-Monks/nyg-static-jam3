@@ -5,9 +5,19 @@
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
+    "build-layout": "node scripts/build-layout-data.js",
     "bundle": "react-static bundle",
     "export": "react-static export",
-    "serve": "serve dist -p 3000 -s"
+    "serve": "serve dist -p 3000 -s",
+    "\n ######################  Support Development Tools  ######################": "",
+    "watch-layout": "npm run build-layout && node scripts/watch-layout-data.js",
+    "js-lint": "eslint \"./src/**/*.js\" -c ./.eslintrc --quiet --ignore-pattern .gitignore",
+    "sass-lint": "stylelint \"./src/**/*.scss\"",
+    "linters": "npm-run-all -p js-lint sass-lint"
+  },
+  "engines": {
+    "node": ">=10.15.0",
+    "npm": ">=6.5.0"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -21,7 +31,24 @@
     "react-static-plugin-sass": "^6.1.1"
   },
   "devDependencies": {
+    "babel-eslint": "10.0.1",
+    "duplicate-package-checker-webpack-plugin": "3.0.0",
+    "eslint-config-jam3": "0.1.4",
     "eslint-config-react-tools": "1.x.x",
-    "serve": "10.1.1"
+    "eslint-plugin-jam3": "0.2.1",
+    "eslint-plugin-promise": "4.0.1",
+    "serve": "10.1.1",
+    "stylelint": "9.9.0",
+    "stylelint-config-jam3": "0.1.2",
+    "webpack-visualizer-plugin": "0.1.11"
+  },
+  "lint-staged": {
+    "gitDir": "../",
+    "linters": {
+      "src/**/*.{js,json,scss}": [
+        "prettier --write",
+        "git add"
+      ]
+    }
   }
 }

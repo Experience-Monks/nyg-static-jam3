@@ -28,6 +28,10 @@ cd your-project-directory
 nyg nyg-static-jam3
 ```
 
+### React Static
+
+See [REACT_STATIC.md](docs/REACT_STATIC.md) for more details on how React Static is intergrated with this generator
+
 ### Generate the output template
 
 Do this if you have the source code and want to generate a version ready to be used in a project.
@@ -49,13 +53,13 @@ Do this if you have the source code and want to generate a version ready to be u
 
 1.  Review `/index.js`, everything is there
 
-If you are looking to contribute with the generator is important to read the [Developer Contribution Guide](https://github.com/Jam3/nyg-static-jam3/blob/master/CONTRIBUTING.md)
+If you are looking to contribute with the generator is important to read the [Developer Contribution Guide](https://github.com/Jam3/nyg-jam3/blob/master/CONTRIBUTING.md)
 
 ## Developer Guide
 
 We are using `react-static` as a base; you can checkout their [Documentation](https://github.com/nozzle/react-static).
 
-You can checkout our [Developer Guides](https://github.com/Jam3/nyg-static-jam3/blob/master/templates/docs/DEVELOPER_GUIDE.md) to know more about the features and customizations.
+You can checkout our [Developer Guides](https://github.com/Jam3/nyg-jam3/blob/master/templates/docs/DEVELOPER_GUIDE.md) to know more about the features and customizations.
 
 ## Main scripts
 
