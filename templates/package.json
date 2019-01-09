@@ -11,6 +11,10 @@
     "serve": "serve dist -p 3000 -s",
     "\n ######################  Support Development Tools  ######################": "",
     "watch-layout": "npm run build-layout && node scripts/watch-layout-data.js",
+    "\n ######################  Automation Tools  ######################": "",
+    "precommit": "echo 'Pre-commit checks...' && lint-staged",
+    "prepush": "echo 'Pre-push checks...' && npm run linters",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
     "js-lint": "eslint \"./src/**/*.js\" -c ./.eslintrc --quiet --ignore-pattern .gitignore",
     "sass-lint": "stylelint \"./src/**/*.scss\"",
     "linters": "npm-run-all -p js-lint sass-lint"
@@ -38,6 +42,7 @@
     "eslint-plugin-jam3": "0.2.1",
     "eslint-plugin-promise": "4.0.1",
     "serve": "10.1.1",
+    "snyk": "1.121.1",
     "stylelint": "9.9.0",
     "stylelint-config-jam3": "0.1.2",
     "webpack-visualizer-plugin": "0.1.11"

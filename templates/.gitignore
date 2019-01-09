@@ -35,6 +35,7 @@ src/**/*.css
 
 # Dynamically built files
 src/style/layout.scss
+/tmp
 
 # Local env variables
 .env.local
