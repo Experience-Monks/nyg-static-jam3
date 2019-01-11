@@ -1,6 +1,5 @@
-import { createStore, compose, combineReducers, applyMiddleware } from 'redux';
-import { routerReducer, connectRouter } from 'react-router-redux';
-// import { connectRouter, routerMiddleware } from 'connected-react-router';
+import { createStore, compose, combineReducers } from 'redux';
+import { routerReducer } from 'react-router-redux';
 import keys from './keys';
 
 import reducerRegistry from './reducer-registry';
@@ -24,7 +23,6 @@ const defaultReducers = {
   layout: layoutReducer,
   isMobileMenuOpen: mainNavReducer,
   routing: routerReducer
-  // router: connectRouter(history)
 };
 
 // Reducers
@@ -66,8 +64,6 @@ if (process.env.NODE_ENV !== 'production') {
     enhancers.push(devToolsExtension());
   }
 }
-
-// enhancers.push(applyMiddleware(routerMiddleware(history)));
 
 const composedEnhancers = compose(...enhancers);
 
