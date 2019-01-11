@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 
 // Your top level component
 import App from './components/App/App';
+
 import { isNode } from './config';
 
+const ConnectedComponent = () => (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
 // Export your top level component as JSX (for static rendering)
-export default App;
+export default ConnectedComponent;
 
 // Render your app
 if (!isNode) {
@@ -17,14 +26,14 @@ if (!isNode) {
   const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render;
 
   const render = Component => {
-    renderMethod(<Component />, target);
+    renderMethod(Component, target);
   };
 
   // Render!
-  render(App);
+  render(<ConnectedComponent />);
 
   // Hot Module Replacement
   if (module.hot) {
-    module.hot.accept('./components/App/App', () => render(<App />));
+    module.hot.accept('./components/App/App', () => render(<ConnectedComponent />));
   }
 }
