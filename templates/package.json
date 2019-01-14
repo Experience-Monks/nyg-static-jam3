@@ -1,0 +1,106 @@
+{
+  "name": "jam3-react-static",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "npm-run-all -p watch-layout start-js",
+    "build": "react-static build --debug",
+    "\n ######################  NPM Secondary Pipeline  ######################": "",
+    "stage": "react-static build --staging",
+    "start-js": "react-static start",
+    "build-layout": "node scripts/build-layout-data.js",
+    "bundle": "react-static bundle",
+    "export": "react-static export",
+    "serve": "serve dist -p 3000 -s",
+    "\n ######################  Support Development Tools  ######################": "",
+    "storybook": "start-storybook -p 9001 -c .storybook -s ./src,./public",
+    "watch-layout": "npm run build-layout && node scripts/watch-layout-data.js",
+    "\n ######################  Automation Tools  ######################": "",
+    "precommit": "echo 'Pre-commit checks...' && lint-staged",
+    "prepush": "echo 'Pre-push checks...' && npm run linters",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "js-lint": "eslint \"./src/**/*.js\" -c ./.eslintrc --quiet --ignore-pattern .gitignore",
+    "sass-lint": "stylelint \"./src/**/*.scss\"",
+    "linters": "npm-run-all -p js-lint sass-lint",
+    "\n ######################  Security Tools  ######################": "",
+    "audit-snyk": "snyk auth [token] && snyk test"
+  },
+  "scriptsComments": {
+    "audit-snyk": "You need to install snyk in the repository and add their token in order to use this script, npm i snyk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jam3/nyg-static-jam3.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jam3/nyg-static-jam3/issues"
+  },
+  "engines": {
+    "node": ">=10.15.0",
+    "npm": ">=6.5.0"
+  },
+  "dependencies": {
+    "@storybook/addon-actions": "4.1.6",
+    "@storybook/addon-info": "4.1.6",
+    "@storybook/addon-knobs": "4.1.6",
+    "@storybook/react": "4.1.6",
+    "axios": "^0.18.0",
+    "bowser": "^2.0.0-beta.3",
+    "classnames": "2.2.6",
+    "history": "4.7.2",
+    "lodash.debounce": "4.0.8",
+    "prop-types": "15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-hot-loader": "^4.3.12",
+    "react-redux": "5.0.7",
+    "react-router-dom": "4.3.1",
+    "react-router-redux": "5.0.0-alpha.9",
+    "react-scripts": "1.1.4",
+    "react-static": "^6.2.0",
+    "react-static-plugin-react-router": "^6.1.1",
+    "react-static-plugin-sass": "^6.1.1",
+    "redux": "3.7.2",
+    "storybook-addon-jsx": "6.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.0.1",
+    "duplicate-package-checker-webpack-plugin": "3.0.0",
+    "eslint-config-jam3": "0.1.4",
+    "eslint-config-react-tools": "1.x.x",
+    "eslint-plugin-jam3": "0.2.1",
+    "eslint-plugin-promise": "4.0.1",
+    "json-sass-vars": "3.0.0",
+    "lint-staged": "8.1.0",
+    "npm-run-all": "4.1.5",
+    "serve": "10.1.1",
+    "snyk": "1.121.1",
+    "stylelint": "9.9.0",
+    "stylelint-config-jam3": "0.1.2",
+    "webpack-visualizer-plugin": "0.1.11"
+  },
+  "optionalDependencies": {
+    "chalk": "2.3.2",
+    "license-checker": "16.0.0",
+    "maxstache": "1.0.7",
+    "minimist": "1.2.0",
+    "mkdirp": "0.5.1",
+    "react-hot-loader": "4.3.1",
+    "sassdoc": "2.5.0",
+    "stats.js": "0.17.0",
+    "svgr": "1.9.0",
+    "webpack-bundle-analyzer": "2.13.1",
+    "webpack-visualizer-plugin": "0.1.11",
+    "why-did-you-update": "0.1.1"
+  },
+  "lint-staged": {
+    "gitDir": "../",
+    "linters": {
+      "src/**/*.{js,json,scss}": [
+        "prettier --write",
+        "git add"
+      ]
+    }
+  }
+}
