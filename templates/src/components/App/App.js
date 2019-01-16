@@ -9,7 +9,7 @@ import './App.scss';
 
 import Pages from '../Pages/Pages';
 
-import { setPreviousRoute, setWindowSize, setLayout, batchActions } from '../../store/modules/app';
+import { setPreviousRoute, setWindowSize, setLayout, batchActions } from '../../redux/modules/app';
 
 import checkProps from '../../util/check-props';
 import settings from '../../data/settings';
