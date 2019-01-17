@@ -6,13 +6,13 @@ Following these guidelines helps to communicate the core ideas and the purpose o
 
 ## Core Ideas
 
-The generator structure is based on the same idea as [Create React App](https://github.com/facebook/create-react-app). We created a full boilerplate and we are using `react-scripts` to run our development server and create the build.
-
-We are using [react-scripts](https://github.com/facebook/create-react-app/tree/next/packages/react-scripts) because it is fully supported by the community and includes the best and most up to date react standards. In order to customize it we decided **not** to [eject](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-run-eject)) and we are using [react-app-rewired](https://github.com/timarney/react-app-rewired).
+The generator structure is based off the original [Create React App](https://github.com/facebook/create-react-app) and [React Static](https://github.com/nozzle/react-static) templates, familiarize yourselves with both repos to get a deeper understanding.
 
 The purpose of this tool is to generate an opinionated template with the Jam3's standards and best practices. This template doesn't have configurations or prompts like [yeoman](http://yeoman.io/) or [nyg](https://www.npmjs.com/package/nyg)
 
-We included in the project the most commonly used components and directory structure, it doesn't mean you need to use all of it and in that case our strategy is to delete those files instead of having a massive configuration file with many different cases, as this is usually hard to maintain. Probably in the future we decide to fork `react-scripts` but hasn't been decided.
+We included in the project the most commonly used components and directory structure, it doesn't mean you need to use all of it and in that case our strategy is to delete those files instead of having a massive configuration file with many different cases, as this is usually hard to maintain.
+
+Feel free to include additional UI components via [Jam3 React UI](https://www.npmjs.com/package/@jam3/react-ui) as your project evolves and you can also generate components via the package.json dev scripts.
 
 ### Convention
 
@@ -30,6 +30,8 @@ No rules are perfect. Sometimes we may introduce flags or configuration if we be
 
 ## Submitting a Pull Request
 
+We use [Standard Version](https://github.com/conventional-changelog/standard-version) to help automate generating change logs, tags and release versioning, please ensure you follow [Conventional Commit Messages](https://conventionalcommits.org/) when making commits, as this is needed by Standard Version scripts to generate change logs based off the commits.
+
 Good pull requests, such as patches, improvements, and new features, are a fantastic help. They should remain focused in scope and avoid containing unrelated commits.
 
 Please **ask first** if somebody else is already working on this or the core developers think your feature is in-scope for Create React App. Generally always have a related issue with discussions for whatever you are including.
@@ -42,16 +44,12 @@ Don't forget to document in the repository your new change or patch. You should 
 
 ## How to release a new version
 
-After a PR is merged, you should:
-
-1.  Update the CHANGELOG.md file
-2.  Bump the package.json version (major, minor, patch)
-3.  Create a tag (release in github)
+Run `npm release` and Standard Version will handle the version bumping and change log updates.
 
 ## Folder Structure
 
-* `templates`: It contains the files and folders needed to generate the app.
-* `test`: After running `npm test` it will copy the app into the `output` directory
+- `templates`: It contains the files and folders needed to generate the app.
+- `test`: After running `npm test` it will copy the app into the `output` directory
 
 ### Overview of root directory
 
