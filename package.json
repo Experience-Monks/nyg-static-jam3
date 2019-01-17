@@ -1,6 +1,6 @@
 {
   "name": "nyg-static-jam3",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "Jam3 frontend static project scaffold generator based on nyg",
   "main": "index.js",
   "scripts": {

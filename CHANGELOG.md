@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/Jam3/nyg-static-jam3/compare/v0.3.1...v1.0.0) (2019-01-17)
+
+
+### Bug Fixes
+
+* **update-readme:** update Contributing.md and Changelog.md ([2a789a4](https://github.com/Jam3/nyg-static-jam3/commit/2a789a4))
+
+
+### Features
+
+* **add-component-scripts:** added Component scripts ([e5feb82](https://github.com/Jam3/nyg-static-jam3/commit/e5feb82))
+
+
+
 <a name="0.3.1"></a>
 
 ## [0.3.1](https://github.com/Jam3/nyg-static-jam3/compare/v0.3.0...v0.3.1) (2019-01-17)
