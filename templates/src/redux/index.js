@@ -1,16 +1,14 @@
 import { createStore, compose, combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
+import { devToolsEnhancer } from 'redux-devtools-extension';
 import keys from './keys';
 
 import reducerRegistry from './reducer-registry';
 
 import preloaderReducer from './modules/preloader';
-import mainNavReducer from './modules/main-nav';
 import { isNode } from '../config';
 
 import { windowSizeReducer, previousRouteReducer, layoutReducer } from './modules/app';
-
-export const history = !isNode ? require('history/createBrowserHistory').default() : undefined;
 
 let store;
 const initialState = {};
@@ -21,7 +19,6 @@ const defaultReducers = {
   windowSize: windowSizeReducer,
   previousRoute: previousRouteReducer,
   layout: layoutReducer,
-  isMobileMenuOpen: mainNavReducer,
   routing: routerReducer
 };
 
@@ -57,12 +54,8 @@ reducerRegistry.setChangeListener(reducers => {
 });
 
 // Enhancers
-if (process.env.NODE_ENV !== 'production') {
-  const devToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION__;
-
-  if (typeof devToolsExtension === 'function') {
-    enhancers.push(devToolsExtension());
-  }
+if (!isNode && process.env.NODE_ENV !== 'production') {
+  enhancers.push(devToolsEnhancer());
 }
 
 const composedEnhancers = compose(...enhancers);

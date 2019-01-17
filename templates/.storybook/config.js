@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from '../src/store';
+import store from '../src/redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { setAddon, configure, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';

@@ -9,7 +9,7 @@ import './App.scss';
 
 import Pages from '../Pages/Pages';
 
-import { setPreviousRoute, setWindowSize, setLayout, batchActions } from '../../store/modules/app';
+import { setWindowSize, setLayout, batchActions } from '../../redux/modules/app';
 
 import checkProps from '../../util/check-props';
 import settings from '../../data/settings';
@@ -28,12 +28,6 @@ class App extends React.PureComponent {
     }
 
     window.addEventListener('resize', this.handleResize, usePassiveEvent());
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.location.pathname !== this.props.location.pathname) {
-      this.props.setPreviousRoute(prevProps.location.pathname);
-    }
   }
 
   componentWillUnmount() {
@@ -69,7 +63,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    setPreviousRoute: val => dispatch(setPreviousRoute(val)),
     setLayout: (width, height, layout) => dispatch(batchActions([setWindowSize({ width, height }), setLayout(layout)]))
   };
 };
@@ -77,7 +70,6 @@ const mapDispatchToProps = dispatch => {
 App.propTypes = checkProps({
   layout: PropTypes.object.isRequired,
   ready: PropTypes.bool.isRequired,
-  setPreviousRoute: PropTypes.func.isRequired,
   setLayout: PropTypes.func.isRequired
 });
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import debounce from 'lodash.debounce';
 
-import { batchActions, setWindowSize, setLayout } from '../src/store/modules/app';
+import { batchActions, setWindowSize, setLayout } from '../src/redux/modules/app';
 
 import settings from '../src/data/settings';
 import usePassiveEvent from '../src/util/use-passive-event';
