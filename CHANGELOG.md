@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# 0.3.0 (2019-01-17)
+
+
+### Bug Fixes
+
+* **redux-route:** move setRoute to Pages, add stats.js for debugging, upgrade redux-dev-tools ([a6ff41a](https://github.com/Jam3/nyg-static-jam3/commit/a6ff41a))
+* **templates:** remove tmp folder files ([df1ac03](https://github.com/Jam3/nyg-static-jam3/commit/df1ac03))
+* **upgrade-redux:** upgrade redux ([21fecf4](https://github.com/Jam3/nyg-static-jam3/commit/21fecf4))
+
+
+### Features
+
+* **upgrade-react-static-version:** Upgrading react-static ([282b007](https://github.com/Jam3/nyg-static-jam3/commit/282b007))
+
+
+
 <a name="0.2.0"></a>
 
 # 0.2.0 (2019-01-16)
